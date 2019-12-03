@@ -38,12 +38,6 @@ enum Direction {
 }
 
 #[derive(Copy, Clone, Eq, PartialEq, Hash)]
-struct Footprint {
-    point: Point,
-    steps_taken: i32,
-}
-
-#[derive(Copy, Clone, Eq, PartialEq, Hash)]
 struct Point {
     x: i32,
     y: i32,
