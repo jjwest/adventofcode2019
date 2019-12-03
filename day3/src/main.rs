@@ -14,7 +14,7 @@ struct Move {
 
 impl FromStr for Move {
     type Err = Box<dyn Error>;
-    fn from_str(s: &str) -> std::result::Result<Move, Self::Err> {
+    fn from_str(s: &str) -> Result<Move> {
         let dir = match s.chars().nth(0).unwrap() {
             'U' => Direction::Up,
             'D' => Direction::Down,
