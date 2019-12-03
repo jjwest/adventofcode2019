@@ -72,8 +72,8 @@ fn part2(original: Vec<i32>) {
 
 fn execute(source: &mut [i32]) {
     for i in (0..source.len()).step_by(4) {
-        let opcode = Instruction::from(&source[i..]);
-        match opcode {
+        let instr = Instruction::from(&source[i..]);
+        match instr {
             Instruction::Add(in0, in1, out) => source[out] = source[in0] + source[in1],
             Instruction::Mul(in0, in1, out) => source[out] = source[in0] * source[in1],
             Instruction::Halt => break,
